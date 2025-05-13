@@ -36,15 +36,34 @@ video {
   display: block;
 }
 
-@media (max-width: 600px) {
-  .video-container {
+@media (max-width: 768px) {
+  body {
     padding: 10px;
+    height: auto;
+  }
+
+  .video-container {
+    width: 100%;
+    padding: 10px;
+    box-shadow: none;
+    border-radius: 0;
   }
 
   video {
     border-radius: 5px;
   }
 }
+
+@media (max-width: 480px) {
+  .video-container {
+    padding: 8px;
+  }
+
+  video {
+    border-radius: 4px;
+  }
+}
+
 
 </style>
 
