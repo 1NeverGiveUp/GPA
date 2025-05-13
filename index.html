@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Hisoblash</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>GPA Hisoblash</h1>
+        <div class="course-selection">
+            <label for="course"></label>
+            <select id="course" onchange="showSemesterInputs()">
+                <option value="0">Kursni tanlang</option>
+                <option value="1">1-kurs</option>
+                <option value="2">2-kurs</option>
+                <option value="3">3-kurs</option>
+                <option value="4">4-kurs</option>
+            </select>
+            <a href="documentation.html">Foydalanish bo'yicha video qo'llanma</a>
+        </div>
+        <div id="semester-input" class="semester-input" style="display: none;">
+            <h2>Semestrlar uchun fanlar sonini kiriting</h2>
+            <div id="semester-fields"></div>
+            <button onclick="generateSubjectInputs()">Fanlar ma'lumotlarini kiritish</button>
+        </div>
+        <div id="subject-input" class="subject-input" style="display: none;">
+            <h2>Fanlar ma'lumotlarini kiriting</h2>
+            <div class="semester-container" id="subject-fields"></div>
+            <button onclick="calculateGPA()">Hisoblash</button>
+        </div>
+        <div id="result" class="result" style="display: none;"></div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
