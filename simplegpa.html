@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Hisoblash</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>GPA Hisoblash</h1>
+        <div class="subject-inputs">
+            <div class="subject-entry" data-index="1">
+                <label for="credits-1">Kredit soati:</label>
+                <input type="number" id="credits-1" min="1" placeholder="Kredit">
+                <label for="grade-1">Baho:</label>
+                <input type="number" id="grade-1" min="0" max="5" placeholder="Baho">
+            </div>
+        </div>
+        <button onclick="addSubject()">+</button>
+        <button onclick="calculateGPA()">Hisoblash</button>
+        <div id="result" class="result" style="display: none;"></div>
+    </div>
+</body>
+<script src="simple_script.js"></script>
+</html>
