@@ -5,24 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GPA Hisoblash</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="simplegpa.css">
 </head>
 
 <body>
     <div class="container">
         <h1>GPA Hisoblash</h1>
+        <p>Fanlaringizni to'liq kiriting hamda kredit soati va bahosini to'g'ri kiriting!</p>
         <div class="subject-inputs">
             <div class="subject-entry" data-index="1">
-                <label for="credits-1">Kredit soati:</label>
                 <input type="number" id="credits-1" min="1" placeholder="Kredit">
-                <label for="grade-1">Baho:</label>
                 <input type="number" id="grade-1" min="0" max="5" placeholder="Baho">
             </div>
         </div>
-        <button onclick="addSubject()">+</button>
-        <button onclick="calculateGPA()">Hisoblash</button>
+        <div class="button-group">
+            <button onclick="addSubject()">+</button>
+            <button onclick="calculateGPA()">Hisoblash</button>
+        </div>
         <div id="result" class="result" style="display: none;"></div>
     </div>
 </body>
 <script src="simple_script.js"></script>
+
 </html>

@@ -7,9 +7,7 @@ function addSubject() {
     newEntry.className = 'subject-entry';
     newEntry.dataset.index = inputCounter;
     newEntry.innerHTML = `
-        <label for="credits-${inputCounter}">Kredit soati:</label>
         <input type="number" id="credits-${inputCounter}" min="1" placeholder="Kredit">
-        <label for="grade-${inputCounter}">Baho:</label>
         <input type="number" id="grade-${inputCounter}" min="0" max="5" placeholder="Baho">
     `;
     subjectInputs.appendChild(newEntry);
@@ -34,7 +32,7 @@ function calculateGPA() {
         }
 
         if ((credits > 0 || grade > 0) && (isNaN(credits) || isNaN(grade) || grade > 5 || credits < 1)) {
-            alert(`${index}-fan uchun kredit (1 dan katta bo'lishi kerak) yoki baho (0-5 oralig'ida) to'g'ri kiritilmagan!`);
+            alert(`${index}-fan uchun baho to'g'ri kiritilmagan!(0-5 oralig'ida bo'lishi kerak)`);
             return;
         }
 
