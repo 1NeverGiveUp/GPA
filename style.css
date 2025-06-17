@@ -36,6 +36,7 @@ button {
     border-radius: 4px;
     font-size: 16px;
     transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
 }
 
 select:focus,
@@ -107,20 +108,73 @@ button:hover {
 
 a {
     text-decoration: none;
+    color: #28a745;
 }
 
-/* --- Responsivlik: Kichik ekranlar uchun --- */
-@media (max-width: 768px) {
+/* --- Responsivlik: Katta planshetlar va kichik noutbuklar (max-width: 1024px) --- */
+@media (max-width: 1024px) {
     body {
-        padding: 10px;
+        padding: 15px;
+        font-size: 16px;
     }
 
     .container {
         padding: 15px;
+        max-width: 100%;
     }
 
-    h1, h2, h3 {
+    h1 {
+        font-size: 28px;
+    }
+
+    h2, h3 {
         font-size: 20px;
+    }
+
+    .semester-container {
+        gap: 15px;
+    }
+
+    .semester-column {
+        min-width: 280px;
+        padding: 12px;
+    }
+
+    select,
+    input,
+    button {
+        font-size: 15px;
+        padding: 8px;
+    }
+
+    .subject-entry {
+        gap: 8px;
+    }
+
+    .subject-entry label {
+        flex: 0 0 90px;
+        font-size: 14px;
+    }
+}
+
+/* --- Responsivlik: Planshetlar va katta telefonlar (max-width: 768px) --- */
+@media (max-width: 768px) {
+    body {
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .container {
+        padding: 12px;
+        border-radius: 6px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2, h3 {
+        font-size: 18px;
     }
 
     select,
@@ -128,36 +182,185 @@ a {
     button {
         width: 100%;
         font-size: 14px;
-        margin: 8px 0;
+        padding: 8px;
+        margin: 6px 0;
+    }
+
+    button {
+        padding: 10px;
     }
 
     .semester-container {
         flex-direction: column;
-        gap: 15px;
+        gap: 12px;
     }
 
     .semester-column {
         min-width: 100%;
+        padding: 10px;
+        border-radius: 6px;
     }
 
     .subject-entry {
         flex-direction: column;
-        align-items: stretch;
+        align-items: flex-start;
+        gap: 8px;
     }
 
     .subject-entry label {
         margin-bottom: 4px;
         flex: none;
+        font-size: 14px;
+    }
+
+    .subject-entry input {
+        width: 100%;
     }
 
     a {
-        display: inline-block;
-        margin-top: 10px;
+        margin-top: 12px;
         font-size: 14px;
-        word-break: break-word;
     }
 
     #result {
         font-size: 16px;
+        padding: 10px;
+        border-radius: 4px;
+    }
+}
+
+/* --- Responsivlik: Kichik telefonlar (max-width: 480px) --- */
+@media (max-width: 480px) {
+    body {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2, h3 {
+        font-size: 16px;
+    }
+
+    select,
+    input,
+    button {
+        font-size: 13px;
+        padding: 6px;
+        margin: 5px 0;
+    }
+
+    button {
+        padding: 8px;
+    }
+
+    .semester-container {
+        gap: 10px;
+    }
+
+    .semester-column {
+        padding: 8px;
+    }
+
+    .subject-entry {
+        gap: 6px;
+    }
+
+    .subject-entry label {
+        font-size: 13px;
+    }
+
+    a {
+        font-size: 13px;
+        margin-top: 10px;
+    }
+
+    #result {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+/* --- Responsivlik: Juda kichik ekranlar (max-width: 360px) --- */
+@media (max-width: 360px) {
+    body {
+        padding: 6px;
+        font-size: 13px;
+    }
+
+    .container {
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    h2, h3 {
+        font-size: 14px;
+    }
+
+    select,
+    input,
+    button {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .semester-column {
+        padding: 6px;
+    }
+
+    .subject-entry label {
+        font-size: 12px;
+    }
+
+    a {
+        font-size: 12px;
+    }
+
+    #result {
+        font-size: 13px;
+        padding: 6px;
+    }
+}
+
+/* --- Katta ekranlar uchun optimallashtirish (min-width: 1200px) --- */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1100px;
+        padding: 25px;
+    }
+
+    .semester-container {
+        gap: 25px;
+    }
+
+    .semester-column {
+        min-width: 320px;
+        padding: 20px;
+    }
+
+    select,
+    input,
+    button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .subject-entry label {
+        flex: 0 0 120px;
+        font-size: 16px;
+    }
+
+    #result {
+        font-size: 20px;
     }
 }

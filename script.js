@@ -60,7 +60,7 @@ function generateSubjectInputs() {
                 semesterColumn.innerHTML += `
                     <div class="subject-entry">
                         <label>Fan ${k}:</label>
-                        <input type="text" id="name-${i}-${j}-${k}" placeholder="Fan nomi">
+                        <input type="text" id="name-${i}-${j}-${k}" placeholder="Fan nomi (ixtiyoriy)">
                         <input type="number" id="credits-${i}-${j}-${k}" min="1" placeholder="Kredit">
                         <input type="number" id="grade-${i}-${j}-${k}" min="0" max="5" placeholder="Baho" oninput="restrictGrade(this)">
                     </div>
