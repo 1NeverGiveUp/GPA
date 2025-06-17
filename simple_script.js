@@ -7,6 +7,7 @@ function addSubject() {
     newEntry.className = 'subject-entry';
     newEntry.dataset.index = inputCounter;
     newEntry.innerHTML = `
+        <label for="credits-${inputCounter}">${inputCounter}.</label>
         <input type="number" id="credits-${inputCounter}" min="1" placeholder="Kredit">
         <input type="number" id="grade-${inputCounter}" min="0" max="5" placeholder="Baho">
     `;
